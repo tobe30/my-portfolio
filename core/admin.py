@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import Portfolio
+from core.models import Portfolio, Contact
 
 # Register your models here.
 
@@ -9,3 +9,4 @@ class PortfolioAdmin(admin.ModelAdmin):
 
 # Register the models with their corresponding admin classes
 admin.site.register(Portfolio, PortfolioAdmin)
+admin.site.register(Contact)

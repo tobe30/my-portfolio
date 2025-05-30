@@ -1,0 +1,376 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Obry is a modern and creative personal portfolio HTML template, perfect for showcasing portfolios, resumes, and personal projects with a clean and professional design. Crafted with attention to detail and smooth animations. — Sakebul Islam"
+    />
+    <meta
+      name="keywords"
+      content="personal portfolio, portfolio template, resume template, CV template, HTML portfolio, Obry template, creative portfolio, personal website, modern portfolio, Sakebul Islam"
+    />
+
+    <!-- Title -->
+    <title>Marizu - My Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'assets/images/malz.png' %}" type="image/x-icon" />
+
+    <!-- CSS Files -->
+    <!-- plugins Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+
+  <body>
+    <!--================= Preloader =================-->
+    <div class="preloader">
+      <button class="btn-primary preloaderCls">
+        <span class="btn-wrapper">
+          Cancel Preloader
+          <span>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+            <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+          </span>
+        </span>
+      </button>
+      <div class="preloader-inner">
+        <!-- <img src="{% static 'assets/images/logo.svg' %}" alt="logo" /> -->
+        <span class="loader"></span>
+      </div>
+    </div>
+
+    <!--================= Header ================= -->
+    <div id="navbars" class="header-sticky navbars">
+      <div class="container header-container">
+        <div class="row justify-content-between align-items-center">
+          <div
+            class="col-xl-9 col-lg-auto d-none d-lg-flex justify-center align-items-center"
+          >
+            <button class="vs-menu-toggle d-inline-block d-lg-none">
+              <i class="fal fa-bars"></i>
+            </button>
+            <div class="logo d-none d-lg-block">
+              <!-- <a href="index.html"
+                ><img src="{% static 'assets/images/logo.svg' %}" alt="Obry" class="logo"
+              /></a> -->
+            </div>
+            <nav class="main-menu d-none d-lg-block">
+              <ul>
+                <li class="menu-item-has-children active">
+                  <a href="{% url 'core:index' %}">
+                    Home
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="10"
+                      viewBox="0 0 43 10"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.625 7.99988C7.71196 3.99988 24.2337 -1.60013 41.625 7.99988"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#about"
+                    >About</a>
+                </li>
+             
+                <li class="menu-item-has-children">
+                  <a href="{% url 'core:portfolio'%}"
+                    >Portfolio
+                    
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'core:contact' %}"
+                    >Contact
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="43"
+                      height="10"
+                      viewBox="0 0 43 10"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.625 7.99988C7.71196 3.99988 24.2337 -1.60013 41.625 7.99988"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xl-3 col-lg-auto">
+            <div class="moblide-header">
+              <button class="vs-menu-toggle d-inline-block d-lg-none">
+                <i class="fal fa-bars"></i>
+              </button>
+              
+              <div class="header-right">
+              
+                <div class="divider d-none d-lg-block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="7"
+                    height="33"
+                    viewBox="0 0 7 33"
+                    fill="none"
+                  >
+                    <circle cx="3.625" cy="16" r="3" fill="#E2C55D" />
+                    <rect x="2.625" width="2" height="33" fill="#E2C55D" />
+                  </svg>
+                </div>
+                <a href="{% url 'core:contact' %}" class="btn-primary d-none d-lg-block">
+                  <div class="btn-wrapper">
+                    Let's talk
+                    <span>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--================= Mobile Menu ================= -->
+    <div class="vs-menu-wrapper">
+      <div class="vs-menu-area text-center">
+        
+        <div class="vs-mobile-menu">
+          <ul>
+            <li class="menu-item-has-children">
+              <a href="{% url 'core:index' %}">Home</a>
+           
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+           
+            <li class="menu-item-has-children">
+              <a href="{% url 'core:portfolio'%}">portfolio</a>
+            </li>
+            <li>
+              <a href="{% url 'core:contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+{% block content%}
+
+{% endblock content %}
+
+
+ <footer
+      class="footer-three bg-color-body section"
+      data-bg-src="{% static 'assets/images/footer/footer-bg-2.png' %}"
+    >
+      <div class="footer-three__top common">
+        <div class="container">
+          <div class="row g-4 justify-content-between">
+            <div class="col-md-3 col-xl-3 fade-anim" data-delay="0.30">
+             
+            </div>
+            <div class="col-md-7 col-xl-5 fade-anim" data-delay="0.45">
+              <div class="footer-links">
+                <ul>
+                  <li><a href="{% url 'core:index' %}" class="active">Home</a></li>
+                  <li><a href="#about">about</a></li>
+                  <li><a href="{% url 'core:portfolio' %}">portfolio</a></li>
+                  <li><a href="{% url 'core:contact' %}">contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-three__center common">
+        <div class="container">
+          <div class="row g-2 g-lg-4 justify-content-between">
+            <div class="col-md-6 col-lg-3 col-xl-3 fade-anim" data-delay="0.30">
+              <div class="footer-widgets v2">
+                <h6 class="widgets-title text-white-color text-capitalize">
+                  address
+                </h6>
+                <address class="text-capitalize">
+                  <span class="d-block"> Delta state </span>
+                 Asaba, Nigeria
+                  
+                </address>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 col-xl-2 fade-anim" data-delay="0.45">
+              <div class="footer-widgets v2">
+                <h6 class="widgets-title text-white-color text-capitalize">
+                  Say Hello
+                </h6>
+                <div class="contact-info">
+                  <a href="mailto:info@exemple.com">malzstores@gmail.com</a>
+                  <a href="tel:+18005552569">+8122 652 108</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2 col-xl-2 fade-anim" data-delay="0.60">
+              <div class="footer-widgets v2 links">
+                <h6 class="widgets-title text-white-color text-capitalize">
+                  Socials
+                </h6>
+                <div class="row gx-xl-2 g-2">
+                  <div class="col-md-12">
+                    <div class="footer-links v2">
+                      <ul>
+                        <li>
+                          <a href="https://x.com/tobemarizu101/" target="_blank">
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                            Twitter
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/in/tobemarizu-daniel-86057b295/" target="_blank">
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                            LinkedIn
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fa-regular fa-arrow-up-right"></i>
+                            Instagram
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-4 fade-anim" data-delay="0.75">
+              <div class="footer-widgets v2 links">
+                <h6 class="widgets-title text-white-color text-capitalize">
+                  Newsletter
+                </h6>
+                <div class="newsletter">
+                  <form
+                    action=""
+                    class="newsletter-form"
+                    autocomplete="off"
+                  >
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="newsletter-email">
+                          <i class="fa-solid fa-envelopes"></i>
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Enter your email address"
+                            required
+                          />
+                          <button type="" class="btn-primary">
+                            <i class="fa-solid fa-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="newsletter-checkbox">
+                          <input
+                            type="checkbox"
+                            name="checkbox"
+                            id="checkbox"
+                            required
+                          />
+                          <label for="checkbox">
+                            I agree to the <a href="#0">priveacy policy</a>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom common bg-color-1">
+        <div class="container">
+          <div class="row gx-4 gy-2">
+            <div class="col-12">
+              <div class="copyright v2">
+                Copyright © 2025
+                <a href="" class="text-color-primary">Marizu inc</a>. All
+                rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================= Main Section Wrapper End ================= -->
+    <a href="#" class="scrollToTop scroll-btn"
+      ><i class="far fa-arrow-up"></i
+    ></a>
+    <!-- ***************** Code End  Here ***************** -->
+    <!--================= All Js File ================= -->
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/vendor/jquery-3.7.1.min.js' %}"></script>
+
+    <!-- Odometer JS -->
+    <script src="{% static 'assets/js/vendor/odometer.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/viewport.jquery.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- jQuery meanMenu -->
+    <script src="{% static 'assets/js/vendor/jquery.meanmenu.min.js' %}"></script>
+
+    <!-- Swiper slider Plugin -->
+    <script src="{% static 'assets/js/vendor/swiper-bundle.min.js' %}"></script>
+
+    <!-- magnific-popup Plugin -->
+    <script src="{% static 'assets/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Wow Plugin -->
+    <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+
+    <!-- GSAP -->
+    <script src="{% static 'assets/js/vendor/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/SplitText.min.js' %}"></script>
+
+    <!-- BackToTop JavaScript File -->
+    <!-- <script src="{% static 'assets/js/vendor/backToTop.js' %}"></script> -->
+
+    <!-- Main JavaScript File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+
+</html>

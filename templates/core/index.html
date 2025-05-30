@@ -1,525 +1,1110 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "include/base.html" %}
 
-        <meta name="description" content="">
-        <meta name="author" content="TemplateMo">
+{% block content %}
+{% load static%}
 
-        <title>MalzWeb</title>
 
-        <link rel="shortcut icon" href="{% static 'images/malz.png' %}" type="image/x-icon" >
-
-        <!-- CSS FILES -->
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/templatemo-first-portfolio-style.css' %}" rel="stylesheet">
-        
-<!--
-
-TemplateMo 578 First Portfolio
-
-https://templatemo.com/tm-578-first-portfolio
-
--->
-    </head>
-    
-    <body>
-
-        <section class="preloader">
-            <div class="spinner">
-                <span class="spinner-rotate"></span>    
+    <main>
+      <!-- ================= Hero Section Start ================= -->
+      <section
+        class="hero-three section section-padding-top-bottom"
+        data-bg-src=""
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="hero-three__content text-center">
+                <h4 class="welcome-text fade-anim mb-5 mt-5" data-delay="1.5">
+                  hello everyone!
+                </h4>
+                <h1 class="hero-title fade-anim mb-3" data-delay="1.7">
+                  <span class="text-color-primary">i’m</span> Marizu
+                </h1>
+                <h4 class="event-info fade-anim" data-delay="1.9">
+                  Full-Stack Developer -
+                  <span class="event-date text-color-primary d-inline-block"
+                    >Hire Me</span
+                  >
+                </h4>
+                <a href="{% url 'core:contact' %}" class="btn-primary fade-anim">
+                  <div class="btn-wrapper v2">
+                    Hire Me
+                    <span>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                      <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
-        </section>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">MalzWeb</a>
-
-                <div class="d-flex align-items-center d-lg-none">
-                    <i class="navbar-icon bi-telephone-plus me-3"></i>
-                    <a class="custom-btn btn" href="https://wa.me/message/ZBQHEJLDHBMZG1">
-                        +234-8122652108
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Services</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Projects</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <i class="navbar-icon bi-telephone-plus me-3"></i>
-                        <a class="custom-btn btn" href="https://wa.me/message/ZBQHEJLDHBMZG1">
-                            +234-8122652108
-                        </a>
+          </div>
+        </div>
+            <div class="hero-one__slider-area bg-color-1" style="margin-top: 100px;">
+          <div class="container hero-container">
+            <div class="row">
+              <div class="col-12">
+                <div class="hero-one__marquee-container">
+                  <div class="hero-one__marquee">
+                    <div class="hero-one__slider">
+                      <div class="hero-one__slide">
+                        <h4 class="text">Problem</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="44"
+                          height="37"
+                          viewBox="0 0 44 37"
+                          fill="none"
+                        >
+                          <path
+                            d="M29.7249 3.8924C35.634 3.8924 43.6962 13.8682 42.8821 22.9966C42.0679 32.125 34.0619 34.8449 26.1616 35.5482C12.9989 36.7201 4.1263 35.5482 1.88256 22.9966C-0.361183 10.445 15.4363 1.6172 28.4357 1M15.0397 23.6634C20.8025 30.1195 24.1698 29.7075 30.3114 23.6634M14.8149 14.5299C11.767 15.7561 15.8182 16.8551 16.329 16.5C16.8459 16.1406 17.8629 13.3037 14.8149 14.5299ZM30.3114 14.5299C27.2635 15.7561 31.3147 16.8551 31.8255 16.5C32.3424 16.1406 33.3594 13.3037 30.3114 14.5299Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="hero-one__slide">
+                        <h4 class="text">Solver</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          viewBox="0 0 50 50"
+                          fill="none"
+                        >
+                          <path
+                            d="M28.0912 20.2921C27.5038 20.0634 22.1641 0.736358 20.7054 1.00273C19.2467 1.2691 23.8527 21.5353 22.9944 21.6737C21.0394 21.989 1.3434 19.5596 1.67204 19.971C5.27735 24.4843 20.3522 25.1634 20.2733 25.8349C20.0097 28.0772 2.45618 35.7495 3.86027 35.7733C8.87108 35.8582 19.8787 31.8067 20.5528 32.664C21.2269 33.5213 18.4336 49.8547 19.6226 48.9649C20.8115 48.0752 23.0749 32.8228 25.9603 32.8717C29.074 32.9245 31.2683 49.1642 33.3017 48.5608C35.335 47.9573 30.2468 31.6086 31.0571 31.4901C34.9662 30.9183 43.1095 39.5435 43.7393 39.4082C44.3692 39.2729 35.9114 29.408 35.9675 28.4855C36.0237 27.5629 49.1611 20.3885 48.6536 19.3985C48.1462 18.4085 33.2682 22.7609 32.758 22.4506C32.2479 22.1402 35.9617 6.15837 34.8651 5.90289C33.7685 5.64742 28.6787 20.5209 28.0912 20.2921Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="hero-one__slide">
+                        <h4 class="text">services</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="44"
+                          height="37"
+                          viewBox="0 0 44 37"
+                          fill="none"
+                        >
+                          <path
+                            d="M29.7249 3.8924C35.634 3.8924 43.6962 13.8682 42.8821 22.9966C42.0679 32.125 34.0619 34.8449 26.1616 35.5482C12.9989 36.7201 4.1263 35.5482 1.88256 22.9966C-0.361183 10.445 15.4363 1.6172 28.4357 1M15.0397 23.6634C20.8025 30.1195 24.1698 29.7075 30.3114 23.6634M14.8149 14.5299C11.767 15.7561 15.8182 16.8551 16.329 16.5C16.8459 16.1406 17.8629 13.3037 14.8149 14.5299ZM30.3114 14.5299C27.2635 15.7561 31.3147 16.8551 31.8255 16.5C32.3424 16.1406 33.3594 13.3037 30.3114 14.5299Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="hero-one__slide">
+                        <h4 class="text">professional</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          viewBox="0 0 50 50"
+                          fill="none"
+                        >
+                          <path
+                            d="M28.0912 20.2921C27.5038 20.0634 22.1641 0.736358 20.7054 1.00273C19.2467 1.2691 23.8527 21.5353 22.9944 21.6737C21.0394 21.989 1.3434 19.5596 1.67204 19.971C5.27735 24.4843 20.3522 25.1634 20.2733 25.8349C20.0097 28.0772 2.45618 35.7495 3.86027 35.7733C8.87108 35.8582 19.8787 31.8067 20.5528 32.664C21.2269 33.5213 18.4336 49.8547 19.6226 48.9649C20.8115 48.0752 23.0749 32.8228 25.9603 32.8717C29.074 32.9245 31.2683 49.1642 33.3017 48.5608C35.335 47.9573 30.2468 31.6086 31.0571 31.4901C34.9662 30.9183 43.1095 39.5435 43.7393 39.4082C44.3692 39.2729 35.9114 29.408 35.9675 28.4855C36.0237 27.5629 49.1611 20.3885 48.6536 19.3985C48.1462 18.4085 33.2682 22.7609 32.758 22.4506C32.2479 22.1402 35.9617 6.15837 34.8651 5.90289C33.7685 5.64742 28.6787 20.5209 28.0912 20.2921Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="hero-one__slide">
+                        <h4 class="text">creative</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="44"
+                          height="37"
+                          viewBox="0 0 44 37"
+                          fill="none"
+                        >
+                          <path
+                            d="M29.7249 3.8924C35.634 3.8924 43.6962 13.8682 42.8821 22.9966C42.0679 32.125 34.0619 34.8449 26.1616 35.5482C12.9989 36.7201 4.1263 35.5482 1.88256 22.9966C-0.361183 10.445 15.4363 1.6172 28.4357 1M15.0397 23.6634C20.8025 30.1195 24.1698 29.7075 30.3114 23.6634M14.8149 14.5299C11.767 15.7561 15.8182 16.8551 16.329 16.5C16.8459 16.1406 17.8629 13.3037 14.8149 14.5299ZM30.3114 14.5299C27.2635 15.7561 31.3147 16.8551 31.8255 16.5C32.3424 16.1406 33.3594 13.3037 30.3114 14.5299Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                      <div class="hero-one__slide">
+                        <h4 class="text">Design</h4>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="50"
+                          height="50"
+                          viewBox="0 0 50 50"
+                          fill="none"
+                        >
+                          <path
+                            d="M28.0912 20.2921C27.5038 20.0634 22.1641 0.736358 20.7054 1.00273C19.2467 1.2691 23.8527 21.5353 22.9944 21.6737C21.0394 21.989 1.3434 19.5596 1.67204 19.971C5.27735 24.4843 20.3522 25.1634 20.2733 25.8349C20.0097 28.0772 2.45618 35.7495 3.86027 35.7733C8.87108 35.8582 19.8787 31.8067 20.5528 32.664C21.2269 33.5213 18.4336 49.8547 19.6226 48.9649C20.8115 48.0752 23.0749 32.8228 25.9603 32.8717C29.074 32.9245 31.2683 49.1642 33.3017 48.5608C35.335 47.9573 30.2468 31.6086 31.0571 31.4901C34.9662 30.9183 43.1095 39.5435 43.7393 39.4082C44.3692 39.2729 35.9114 29.408 35.9675 28.4855C36.0237 27.5629 49.1611 20.3885 48.6536 19.3985C48.1462 18.4085 33.2682 22.7609 32.758 22.4506C32.2479 22.1402 35.9617 6.15837 34.8651 5.90289C33.7685 5.64742 28.6787 20.5209 28.0912 20.2921Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </section>
+      <!-- ================= Hero Section Start ================= -->
 
-        <main>
-
-            <section class="hero d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12">
-                            <div class="hero-text">
-                                <div class="hero-title-wrap d-flex align-items-center mb-4">
-                                    <img src="{% static 'images/tobes.jpg' %}" class="avatar-image avatar-image-large img-fluid" alt="">
-
-                                    <h1 class="hero-title ms-3 mb-0">Hello friend!</h1>
-                                </div>
-
-                                <h2 class="mb-4">I’m available for freelance work.</h2>
-                                <p class="mb-4"><a class="custom-btn btn custom-link" download href="{% static 'images/Maz Resume.pdf' %}">Get My Resume</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12 position-relative">
-                            <div class="hero-image-wrap"></div>
-                            <img src="{% static 'images/ai.png' %}" class="hero-image img-fluid" alt="">
-                        </div>
-
-                    </div>
+        <section
+        id="about"
+        class="about section section-padding-bottom position-relative overflow-hidden fade-anim"
+        data-offset="100"
+        data-bg-src="{% static 'assets/images/about/about-bg-1.png' %}"
+      >
+        <div class="shape-1">
+          <img src="{% static 'assets/images/about/about-shape-1-1.png' %}" alt="shape" />
+        </div>
+        <div class="shape-2">
+          <img src="{% static 'assets/images/about/about-shape-1-2.png' %}" alt="shape" />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="section-header text-center text-uppercase row-padding-top"
+              >
+                <h2 class="section-title">Let's work together</h2>
+              </div>
+            </div>
+            <div class="col-12">
+              <ul
+                class="about__tabs nav nav-pills"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-about-me-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-about-me"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-about-me"
+                    aria-selected="false"
+                    disabled
+                  >
+                    About Me
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-experience-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-experience"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-experience"
+                    aria-selected="false"
+                  >
+                    Experience
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-education-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-education"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-education"
+                    aria-selected="false"
+                  >
+                    Education
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-skills-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-skills"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-skills"
+                    aria-selected="false"
+                  >
+                    Skills
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-awards-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-awards"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-awards"
+                    aria-selected="true"
+                  >
+                    Awards
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12">
+              <div
+                class="about__content-container tab-content"
+                id="pills-tabContent"
+              >
+                <div
+                  class="tab-pane fade"
+                  id="pills-about-me"
+                  role="tabpanel"
+                  aria-labelledby="pills-about-me-tab"
+                  tabindex="0"
+                >
+                  About Me
                 </div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
-            </section>
-
-
-            <section class="about section-padding" id="section_2">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <img src="{% static 'images/android-199225_1280.jpg' %}" class="about-image img-fluid" alt="">
+                <div
+                  class="tab-pane fade"
+                  id="pills-experience"
+                  role="tabpanel"
+                  aria-labelledby="pills-experience-tab"
+                  tabindex="0"
+                >
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="experience__tab-content">
+                        <div class="section-header">
+                          <span class="section-sub-title text-uppercase"
+                            >experience</span
+                          >
+                          <h2 class="section-title text-capitalize">
+                            Crafting Seamless Full Stack Solutions
+                          </h2>
+                          <p class="info">
+                            a visionary creative developer,
+                            <span class="text-color-primary">known</span>
+                          </p>
                         </div>
-
-                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                            <div class="about-thumb">
-
-                                <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                    <h2 class="text-white me-4 mb-0">My Story</h2>
-
-                                    <img src="{% static 'images/IMG-1852.jpg' %}" class="avatar-image img-fluid" alt="">
-                                </div>
-
-                                <h3 class="pt-2 mb-3">a little bit about Tobe</h3>
-
-                                <p>I'm Marizu Tobechukwu, a passionate technology solutions provider. I specialize in helping startups and business owners establish a strong online presence by developing tailored, high-quality websites and web applications. My goal is to enhance brand awareness, drive engagement, and boost sales for my clients.
-
-                                    With a keen interest in emerging technologies like Web3 and cryptocurrency, I aim to integrate innovative solutions that keep businesses ahead in the digital age.</p>
-
-                                <!--<p>You are allowed to use this template for your websites. You are not allowed to redistribute the template ZIP file on any other website. Please <a href="https://templatemo.com/contact" target="_blank">contact us</a> for more info.</p>-->
-                            </div>
-                        </div>
-
+                      </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="featured section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <div class="profile-thumb">
-                                <div class="profile-title">
-                                    <h4 class="mb-0">Information</h4>
-                                </div>
-
-                                <div class="profile-body">
-                                    <p>
-                                        <span class="profile-small-title">Name</span> 
-                                        <span>Marizu Tobechukwu</span>
-                                    </p>
-
-                                    <p>
-                                        <span class="profile-small-title">Occ</span> 
-                                        <span>Computer Scientist</span>
-                                    </p>
-
-                                    <p>
-                                        <span class="profile-small-title">Phone</span> 
-                                         <span><a href="tel: 305-240-9671">+234-8122652108</a></span>
-                                    </p>
-
-                                    <p>
-                                        <span class="profile-small-title">Email</span> 
-                                        <span><a href="mailto:hello@josh.design">tobemarizu@gmail.com</a></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                            <div class="about-thumb">
-                                <div class="row">
-                                    <div class="col-lg-6 col-6 featured-border-bottom py-2">
-                                        <strong class="featured-numbers">2+</strong>
-
-                                        <p class="featured-text">Years of Experiences</p>
-                                    </div>
-
-                                    <div class="col-lg-6 col-6 featured-border-start featured-border-bottom ps-5 py-2">
-                                        <strong class="featured-numbers">5+</strong>
-
-                                        <p class="featured-text">Happy Customers</p>
-                                    </div>
-
-                                    <div class="col-lg-6 col-6 pt-4">
-                                        <strong class="featured-numbers">10+</strong>
-
-                                        <p class="featured-text">Project Finished</p>
-                                    </div>
-
-                                    <div class="col-lg-6 col-6 featured-border-start ps-5 pt-4">
-                                        <strong class="featured-numbers">...</strong>
-
-                                        <p class="featured-text">Digital Awards</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="clients section-padding">
-                <div class="container">
-                    <div class="row align-items-center">
-
-                        <div class="col-lg-12 col-12">
-                            <h3 class="text-center mb-5">Companies I've had worked</h3>
-                        </div>
-
-                        <div class="col-lg-2 col-4 ms-auto clients-item-height">
-                            <img src="{% static 'images/bank4.png' %}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{% static 'images/bank2.png' %}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{% static 'images/minoz.png' %}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 clients-item-height">
-                            <img src="{% static 'images/malz.png' %}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                        <div class="col-lg-2 col-4 me-auto clients-item-height">
-                            <img src="{% static 'images/clients/profil-rejser.svg' %}" class="clients-image img-fluid" alt="">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="services section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-10 col-12 mx-auto">
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                                <img src="{% static 'images/handshake-man-woman-after-signing-business-contract-closeup.jpg' %}" class="avatar-image img-fluid" alt="">
-
-                                <h2 class="text-white ms-4 mb-0">Services</h2>
-                            </div>
-
-                            <div class="row pt-lg-5">
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Websites</h3>
-
-                                            <div class="services-price-wrap ms-auto">
-                                                <p class="services-price-text mb-0">₦200,000</p>
-                                                <div class="services-price-overlay"></div>
-                                            </div>
-                                        </div>
-
-                                        <p>Build good and responsive website varies from web to mobile Frontend & Backend</p>
-
-                                        <a href="#" class="custom-btn custom-border-btn btn mt-3">Info Only</a>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-globe"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Graphics</h3>
-
-                                            <div class="services-price-wrap ms-auto">
-                                                <p class="services-price-text mb-0">₦10,0000</p>
-                                                <div class="services-price-overlay"></div>
-                                            </div>
-                                        </div>
-
-                                        <p>Design amazing graphics Logo banners etc... </p>
-
-                                        <a href="#" class="custom-btn custom-border-btn btn mt-3">Info Only</a>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-lightbulb"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Ecommerce</h3>
-
-                                            <div class="services-price-wrap ms-auto">
-                                                <p class="services-price-text mb-0">₦300,000</p>
-                                                <div class="services-price-overlay"></div>
-                                            </div>
-                                        </div>
-
-                                        <p>If you need a customized ecommerce website for your business, feel free to discuss with me.</p>
-
-                                        <a href="#" class="custom-btn custom-border-btn btn mt-3">Info Only</a>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-phone"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Wordpress</h3>
-
-                                            <div class="services-price-wrap ms-auto">
-                                                <p class="services-price-text mb-0">₦150,000</p>
-                                                <div class="services-price-overlay"></div>
-                                            </div>
-                                        </div>
-
-                                        <p>To Create any wordpress website from agency, ecommerce, logistics etc.</p>
-
-                                        <a href="#" class="custom-btn custom-border-btn btn mt-3">Info Only</a>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-google"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="projects section-padding" id="section_4">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-md-8 col-12 ms-auto">
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <img src="{% static 'images/white-desk-work-study-aesthetics.jpg' %}" class="avatar-image img-fluid" alt="">
-
-                                <h2 class="text-white ms-4 mb-0">Projects</h2>
-                            </div>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        {% for p in portfolio %}
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="projects-thumb">
-                                <div class="projects-info">
-                                    <small class="projects-tag">{{p.title}}</small>
-
-                                    <h3 class="projects-title">{{p.name}}</h3>
-                                </div>
-
-                                <a href="{{p.link}}">
-                                    <img src="{{p.image.url}}" class="projects-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        {% empty %}
-                        <p style="color: red;">Nothing to show</p>
-                        {% endfor%}
-
-                      
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact section-padding" id="section_5">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-8 col-12">
-                                <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                                    <img src="{% static 'images/aerial-view-man-using-computer-laptop-wooden-table.jpg' %}" class="avatar-image img-fluid" alt="">
-
-                                    <h2 class="text-white ms-4 mb-0">Say Hi</h2>
-                                </div>
-                            </div>
-
-                            <div class="clearfix"></div>
-
-                            <div class="col-lg-3 col-md-6 col-12 pe-lg-0">
-                                <div class="contact-info contact-info-border-start d-flex flex-column">
-                                    <strong class="site-footer-title d-block mb-3">Services</strong>
-
-                                    <ul class="footer-menu">
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Websites</a></li>
-
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">wordpress</a></li>
-
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Ecommerce</a></li>
-
-                                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Courier</a></li>
-                                    </ul>
-
-                                    <strong class="site-footer-title d-block mt-4 mb-3">Stay connected</strong>
-
-                                    <ul class="social-icon">
-                                        <li class="social-icon-item"><a href="https://twitter.com/tobemarizu101" class="social-icon-link bi-twitter"></a></li>
-
-                                        <li class="social-icon-item"><a href="https://www.linkedin.com/in/tobemarizu-daniel-86057b295" class="social-icon-link bi-linkedin"></a></li>
-
-                                        <li class="social-icon-item"><a href="https://wa.me/message/ZBQHEJLDHBMZG1" class="social-icon-link bi-whatsapp"></a></li>
-
-                                        <li class="social-icon-item"><a href="https://www.youtube.com/@tobechukwumarizu2471" class="social-icon-link bi-youtube"></a></li>
-                                    </ul>
-
-                                    <strong class="site-footer-title d-block mt-4 mb-3">Start a project</strong>
-
-                                    <p class="mb-0">I’m available for freelance projects</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6 col-12 ps-lg-0">
-                                <div class="contact-info d-flex flex-column">
-                                    <strong class="site-footer-title d-block mb-3">About</strong>
-
-                                    <p class="mb-2">
-                                        I’m Marizu Tobechukwu, a computer scientist, web developer, and aspiring AI developer with a passion for solving real-world problems. Skilled in Python, JavaScript, PHP, and Django, I create cutting-edge solutions that empower businesses to thrive in the digital space.
-                                        With a strong interest in crypto and Web3 technologies, I’m exploring how these innovations can transform industries and drive the future of technology.
-                              </p>
-
-                                    <strong class="site-footer-title d-block mt-4 mb-3">Email</strong>
-
-                                    <p>
-                                        <a href="mailto:tobemarizu@gmail.com">
-                                            tobemarizu@gmail.com
-                                        </a>
-                                    </p>
-
-                                    <strong class="site-footer-title d-block mt-4 mb-3">Call</strong>
-
-                                    <p class="mb-0">
-                                        <a href="https://wa.me/message/ZBQHEJLDHBMZG1">
-                                            +234-8122652108
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                                <form onsubmit="emailSend(); reset(); return false;" class="custom-form -form" >
-
-
-                                        <div class="col-lg-3 col-12 ms-auto">
-                                          <a href="https://wa.me/message/ZBQHEJLDHBMZG1"> <button type="button" class="form-control"><i class="bi bi-whatsapp"></i> whatsapp</button></a> 
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <div class="copyright-text-wrap">
-                            <p class="mb-0">
-                                <span class="copyright-text">Copyright © 2025 <a href="#">Marizu</a> Company. All rights reserved.</span>
-                                Design: 
-                                <a rel="sponsored" href="#" target="_blank">ME</a>
+                    <div class="col-md-6">
+                      <div class="experience__tab-content">
+                        <div class="stack-box v1">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/experience/experience-icon-1-1.png' %}"
+                              alt="experience-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h4 class="stack-title text-color-12">
+                              
+                            </h4>
+                            <span class="stack-year text-color-13"
+                              >2022 - 2025</span
+                            >
+                            <p>
+                              I am a creative developer, known for my
+                              ability to turn ideas into real application and
+                              designs.
                             </p>
+                          </div>
                         </div>
+                      </div>
                     </div>
-
+                  </div>
+                  <div class="row g-4 pt-4 pt-lg-5">
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/experience/javascript.png' %}"
+                              alt="experience-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Full-Stack</h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - Present</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                            I am a full-stack developer, known for my creativity
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/experience/upwork.png' %}"
+                              alt="experience-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Design</h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - present</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                            Also design and develop websites, with Wordpress,
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/experience/python.png' %}"
+                              alt="experience-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Python Developer</h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - present</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                            Python developer, django, framework, and building Ai bots and applications
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-education"
+                  role="tabpanel"
+                  aria-labelledby="pills-education-tab"
+                  tabindex="0"
+                >
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="education__tab-content">
+                        <div class="section-header">
+                          <span class="section-sub-title text-uppercase"
+                            >education</span
+                          >
+                          <h2 class="section-title text-capitalize">
+                            Computer Science Student
+                          </h2>
+                          <p class="info">
+                            a Computer Scientist
+                            <span class="text-color-primary">known</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="education__tab-content">
+                        <div class="stack-box v1">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/education/education-icon-1-1.png' %}"
+                              alt="education-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h4 class="stack-title text-color-12">
+                              Alex Ekwueme Federal University Ndufu-Alike
+                            </h4>
+                            <span class="stack-year text-color-13"
+                              >2022 - 2026</span
+                            >
+                            <p>
+                              I am a Student of Alex Ekwueme Federal University Ndufu-Alike, studying Computer Science.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-4 pt-4 pt-lg-5">
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/education/education-icon-1-2.png' %}"
+                              alt="education-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Master in Django</h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - present</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                            Building web applications with Django, Python, and other frameworks.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/education/education-icon-1-3.png' %}"
+                              alt="education-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Bsc in computer science </h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - 2026</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                            Bachelor of Science in Computer Science, with a focus on software development and web design.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                      <div class="stack-box v2">
+                        <span class="shape"></span>
+                        <div class="box-top">
+                          <div class="box-thumb">
+                            <img
+                              src="{% static 'assets/images/education/education-icon-1-4.png' %}"
+                              alt="education-icon"
+                            />
+                          </div>
+                          <div class="box-header">
+                            <h5 class="stack-title">Invation Design</h5>
+                            <span class="stack-year text-color-14"
+                              >2022 - 2025</span
+                            >
+                          </div>
+                        </div>
+                        <div class="box-bottom">
+                          <p>
+                           I will be Invation Design, a design competition that will showcase my skills and creativity in web design.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-skills"
+                  role="tabpanel"
+                  aria-labelledby="pills-skills-tab"
+                  tabindex="0"
+                >
+                  <div class="row gx-4 g-xxl-5 gy-4">
+                    <div class="col-md-6">
+                      <div class="skills__tab-content">
+                        <div class="section-header">
+                          <span class="section-sub-title text-uppercase"
+                            >skills</span
+                          >
+                          <h2 class="section-title text-capitalize">
+                            Let’s Explore My Skills experienc
+                          </h2>
+                          <p class="info">
+                            a visionary creative designer,
+                            <span class="text-color-primary">& My Skills</span>
+                          </p>
+                        </div>
+                        <div class="skills-list">
+                          <div class="skill v2">
+                            <span class="title">Python  </span>
+                            <div class="skill-bar">
+                              <div class="skill-progress" style="width: 80%">
+                                <span class="skill-count" data-skill-count="80"
+                                  >80%</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="skill v2">
+                            <span class="title">web development </span>
+                            <div class="skill-bar">
+                              <div class="skill-progress" style="width: 90%">
+                                <span class="skill-count" data-skill-count="65"
+                                  >90%</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="skill v2">
+                            <span class="title">Wordpress</span>
+                            <div class="skill-bar">
+                              <div class="skill-progress" style="width: 70%">
+                                <span class="skill-count" data-skill-count="90"
+                                  >70%</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="skills__tab-thumb h-100">
+                        <div class="thumb">
+                          <img
+                            src="{% static 'assets/images/skillsTab/lol.jpg' %}"
+                            alt="skill-thumb"
+                            class="w-100"
+                          />
+                        </div>
+                        <div class="thumb">
+                          <img
+                            src="{% static 'assets/images/skillsTab/anonymous_dev.png' %}"
+                            alt="skill-thumb"
+                            class="w-100"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-awards"
+                  role="tabpanel"
+                  aria-labelledby="pills-awards-tab"
+                  tabindex="0"
+                >
+                  <div class="row align-items-end gy-5">
+                    <div class="col-lg-6">
+                      <div class="about__tab-content">
+                        <span class="section-sub-title text-uppercase"
+                          >About me</span
+                        >
+                        <h2 class="section-title">
+                          Build Apps, website & branding
+                        </h2>
+
+                        <p>
+                          Hi, I’m Marizu Tobechukwu Daniel — a passionate Full-Stack Developer and problem solver crafting sleek, powerful web apps that make a difference. With 3+ years of experience in Django, React, and JavaScript, I turn complex problems into simple, elegant solutions. Always curious and driven, I’m here to build digital experiences that stand out and deliver real value.
+                        </p>
+                        <div
+                          class="row g-4 justify-content-between notes-and-info"
+                        >
+                          <div class="col-sm-5 col-lg-12 col-xl-6">
+                            <div class="note">
+                              <h6 class="note-title">Note</h6>
+                              <ul class="note-list">
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  AI Developer
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  web and mobile design
+                                </li>
+                                <li>
+                                  <i class="fa-solid fa-badge-check"></i>
+                                  unlimited design
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-sm-7 col-lg-12 col-xl-6">
+                            <div class="info">
+                              <div class="info-thumb">
+                                <img
+                                  src="{% static 'assets/images/skillsTab/anonymous_dev.png' %}"
+                                  alt="thumb"
+                                />
+                              </div>
+                              <div class="info-content">
+                                <h6 class="info-title">I Am A Problem Solver</h6>
+                                <span>Creative</span>
+                              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="{% url 'core:contact' %}" class="btn-primary">
+                          <div class="btn-wrapper">
+                            Let's talk
+                            <span>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                              <i
+                                class="fa-sharp fa-solid fa-arrow-up-right"
+                              ></i>
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div
+                        class="about__tab-thumb d-flex justify-content-center"
+                      >
+                        <img
+                          src="{% static 'assets/images/hero/tobem-removebg-preview.png' %}"
+                          alt="about-thumb"
+                        />
+                        <div class="thumb-bg">
+                          <img
+                            src="{% static 'assets/images/about/flower.png' %}"
+                            alt="flower"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
-        <script src="https://smtpjs.com/v3/smtp.js">
-        </script>
+          </div>
+        </div>
+      </section>
+
+
+        <section
+        id="portfolio"
+        class="work section section-padding-top-bottom position-relative overflow-hidden fade-anim"
+        data-offset="100"
+      >
+        <div class="section-shape">
+          <img src="{% static 'assets/images/work/section-shap.png' %}" alt="section-shap" />
+        </div>
+        <div class="container position-relative">
+          <div class="circular-ball">
+            <img
+              src="{% static 'assets/images/icons/circular-ball.png' %}"
+              alt="circular-ball"
+            />
+          </div>
+          <div class="row gx-4 gy-4 gy-dm-0 align-items-end row-padding-bottom">
+            <div class="col-md-4 section-header text-center text-md-start">
+              <h2 class="section-title text-uppercase">
+                our <span class="highlight highlight-bottom-border">works</span>
+              </h2>
+            </div>
+            <div class="col-md-8">
+              <ul class="work__tabs nav nav-tabs" id="workTab" role="tablist">
+               
+                <li class="work-tab nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="website-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#website-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="website-tab-pane"
+                    aria-selected="false"
+                  >
+                    <span class="dot"></span>
+                    website
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="work__content-container tab-content"
+                id="workTabContent"
+              >
+          
+                <div
+                  class="work__content tab-pane fade-show active"
+                  id="website-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="website-tab"
+                  tabindex="0"
+                >
+                  <div class="row g-4">
+                    {% for p in portfolio%}
+                    <div class="col-md-6">
+                      <div class="work-box">
+                        <div class="work-thumb">
+                          <img
+                            src="{{p.image.url}}"
+                            alt="work-thumb"
+                            class="w-100"
+                          />
+                          <div class="thumb-info">
+                            <a
+                              href="{{p.link}}"
+                              class="icon"
+                            >
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="work-content">
+                          <div class="work-info">
+                            <h4 class="title">
+                              <a href="{{p.link}}">{{p.name}}</a>
+                            </h4>
+                            <span class="sub-title">{{p.title}}</span>
+                          </div>
+                          <a href="{{p.link}}" class="work-link">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 56 55"
+                              fill="none"
+                            >
+                              <path
+                                d="M37.4713 27.1989L32.0716 21.1992C31.9564 21.072 31.7956 21 31.6253 21H28.0254C27.7891 21 27.5743 21.1392 27.4771 21.3552C27.3811 21.5724 27.4207 21.8256 27.5791 22.0007L32.6176 27.5996L27.5791 33.1973C27.4207 33.3737 27.3799 33.6269 27.4771 33.8429C27.5743 34.0601 27.7891 34.1993 28.0254 34.1993H31.6253C31.7956 34.1993 31.9564 34.1261 32.0716 34.0013L37.4713 28.0016C37.6765 27.7736 37.6765 27.4257 37.4713 27.1989Z"
+                                fill="currentColor"
+                              />
+                              <path
+                                d="M29.6715 27.1989L24.2718 21.1992C24.1566 21.072 23.9958 21 23.8254 21H20.2256C19.9893 21 19.7745 21.1392 19.6773 21.3552C19.5813 21.5724 19.6209 21.8256 19.7793 22.0007L24.8178 27.5996L19.7793 33.1973C19.6209 33.3737 19.5801 33.6269 19.6773 33.8429C19.7745 34.0601 19.9893 34.1993 20.2256 34.1993H23.8254C23.9958 34.1993 24.1566 34.1261 24.2718 34.0013L29.6715 28.0016C29.8767 27.7736 29.8767 27.4257 29.6715 27.1989Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                   {%endfor%}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-padding-top">
+            <div class="col-12 text-center">
+              <a href="{% url 'core:portfolio'%}" class="btn-primary">
+                <div class="btn-wrapper">
+                  view more
+                  <span>
+                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+
+      <section
+        class="quote section bg-color-body section-padding-bottom fade-anim"
+        data-offset="100"
+      >
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="quote__wrapper">
+                <div class="swiper quote__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="quote-box">
+                        <div class="quote-icon">"</div>
+                        <h5 class="quote">
+                          “Marizu is the best i have seen so far, good communication skills
+                          i love your designs keep it up.”
+                        </h5>
+                        <div class="quote-footer">
+                          <div class="author">
+                            <div class="author-avatar">
+                              <img
+                                src="{% static 'assets/images/quote/chuks.jpg' %}"
+                                alt="quote-avatar"
+                                class="w-100"
+                              />
+                            </div>
+                            <div class="author-content">
+                              <h6 class="author-name">Chukwuma</h6>
+                              <h5 class="author-designation">CEO & Founder</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quote-box">
+                        <div class="quote-icon">"</div>
+                        <h5 class="quote">
+                          “A very skill full person, problem solver love his works.”
+                        </h5>
+                        <div class="quote-footer">
+                          <div class="author">
+                            <div class="author-avatar">
+                              <img
+                                src="{% static 'assets/images/quote/default.jpg' %}"
+                                alt="quote-avatar"
+                                class="w-100"
+                              />
+                            </div>
+                            <div class="author-content">
+                              <h6 class="author-name">Daniel</h6>
+                              <h5 class="author-designation">Web3 </h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="quote-box">
+                        <div class="quote-icon">"</div>
+                        <h5 class="quote">
+                          “He built my logisitic website delivered on time also a good friend”
+                        </h5>
+                        <div class="quote-footer">
+                          <div class="author">
+                            <div class="author-avatar">
+                              <img
+                                src="{% static 'assets/images/quote/quote-avatar-1.png' %}"
+                                alt="quote-avatar"
+                                class="w-100"
+                              />
+                            </div>
+                            <div class="author-content">
+                              <h6 class="author-name">Charles</h6>
+                              <h5 class="author-designation">Student</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="quote__pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section
+        class="statistic section bg-color-primary fade-anim"
+        data-offset="100"
+        data-bg-src="{% static 'assets/images/statistic/statistic-bg-shape.png' %}"
+      >
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-sm-6 col-lg-3">
+              <div class="statistic__box">
+                <div class="icon-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="96"
+                    height="95"
+                    viewBox="0 0 96 95"
+                    fill="none"
+                  >
+                    <circle
+                      cx="48.3754"
+                      cy="47.5083"
+                      r="41.4545"
+                      fill="#141514"
+                    />
+                    <circle
+                      cx="48.375"
+                      cy="47.5083"
+                      r="46.75"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-dasharray="3 3"
+                    />
+                    <path
+                      d="M47.0386 46.4218C52.1249 46.4218 56.2481 42.2998 56.2481 37.215C56.2481 32.1303 52.1249 28.0083 47.0386 28.0083C41.9523 28.0083 37.8291 32.1303 37.8291 37.215C37.8291 42.2998 41.9523 46.4218 47.0386 46.4218Z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M46.6196 62.3444V58.9045C46.6196 58.1261 46.9277 57.3812 47.4786 56.8321L50.8107 53.5009C50.7287 51.6864 51.2377 49.8484 52.3312 48.3016C50.6684 48.0187 48.8885 47.8647 47.0382 47.8647C41.4756 47.8647 36.5511 49.2558 33.4935 51.3399C31.161 52.9301 29.875 54.9506 29.875 57.0715V59.4987C29.875 60.2537 30.1747 60.9785 30.7089 61.5108C31.243 62.0448 31.9664 62.3444 32.7216 62.3444H46.6196Z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M58.1766 59.7531C60.206 60.0577 62.351 59.4283 63.9133 57.8665C66.5288 55.2518 66.5288 51.0067 63.9133 48.3937C61.2995 45.7789 57.053 45.7789 54.4375 48.3937C52.8753 49.9554 52.2457 52.0998 52.5504 54.1303L48.6623 58.0155C48.4262 58.2515 48.2939 58.5713 48.2939 58.9044V62.7528C48.2939 63.4458 48.8566 64.0083 49.5498 64.0083H53.3994C53.7326 64.0083 54.0524 63.876 54.2885 63.64L58.1766 59.7531ZM57.8919 54.4132C57.1836 53.7051 57.1836 52.5551 57.8919 51.847C58.6002 51.1389 59.7506 51.1389 60.4589 51.847C61.1672 52.5551 61.1672 53.7051 60.4589 54.4132C59.7506 55.1213 58.6002 55.1213 57.8919 54.4132Z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h2 class="counter-item">
+                    <span class="odometer" data-odometer-final="10">0</span>
+                    <em class="d-inline-block fst-normal">+</em>
+                  </h2>
+                  <span class="info">MAKE DESIGN</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="statistic__box">
+                <div class="icon-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="96"
+                    height="95"
+                    viewBox="0 0 96 95"
+                    fill="none"
+                  >
+                    <circle
+                      cx="48.3754"
+                      cy="47.5083"
+                      r="41.4545"
+                      fill="#141514"
+                    />
+                    <circle
+                      cx="48.375"
+                      cy="47.5083"
+                      r="46.75"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-dasharray="3 3"
+                    />
+                    <path
+                      d="M65.2653 36.6975C65.2653 35.1367 63.9955 33.8667 62.4345 33.8667H61.1971V32.3072C61.197 31.0377 60.168 30.0083 58.8982 30.0083C57.6287 30.0083 56.5993 31.0377 56.5993 32.3072V33.8668H50.3691V32.3072C50.3692 31.0377 49.3399 30.0083 48.07 30.0083C46.8005 30.0083 45.771 31.0377 45.771 32.3072V33.8668H39.541V32.3072C39.5411 31.0377 38.5118 30.0083 37.2421 30.0083C35.9724 30.0083 34.9432 31.0377 34.9432 32.3072V33.8668H33.7058C32.1449 33.8668 30.875 35.1366 30.875 36.6976V40.9684C30.875 41.5008 31.0229 41.9991 31.2795 42.4249V63.5821C31.2795 64.9199 32.3679 66.0083 33.7058 66.0083H62.4345C63.7725 66.0083 64.8609 64.9199 64.8609 63.5821V42.4248C65.1173 41.9989 65.2653 41.5007 65.2653 40.9683V36.6975ZM34.5144 62.7735V43.7994H61.626V62.7735H34.5144Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M51.7179 56.7774H48.4203L50.258 54.731C51.8221 53.0965 52.7188 51.3218 52.7188 49.86C52.7188 48.4935 52.1948 47.3424 51.2033 46.531C50.322 45.8099 49.1173 45.4287 47.7194 45.4287C46.11 45.4287 44.4224 46.1336 43.2061 47.3134C42.8494 47.6582 42.6419 48.141 42.6366 48.639C42.632 49.1359 42.8304 49.6229 43.1809 49.9749L43.1953 49.9891C43.5474 50.3378 44.0136 50.5297 44.51 50.5297C44.997 50.5297 45.4583 50.3433 45.8086 50.005C46.3217 49.5097 47.0895 49.1769 47.7194 49.1769C48.2916 49.1769 48.6609 49.3104 48.8161 49.4357C48.8662 49.4761 48.9704 49.5602 48.9704 49.8601C48.9704 50.0686 48.7084 50.9363 47.5452 52.1503C47.5306 52.1651 47.5166 52.1802 47.5012 52.1973L43.0329 57.162C42.7233 57.5056 42.5527 57.95 42.5527 58.4135V58.4316C42.5527 58.4672 42.5539 58.5028 42.556 58.5385C42.5537 58.5762 42.5527 58.6151 42.5527 58.656C42.5527 59.687 43.3913 60.5257 44.4222 60.5257H51.7179C52.7488 60.5257 53.5875 59.687 53.5875 58.6472C53.5875 57.6161 52.7488 56.7774 51.7179 56.7774Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h2 class="counter-item">
+                    <span class="odometer" data-odometer-final="3">0</span>
+                    <em class="d-inline-block fst-normal">+</em>
+                  </h2>
+                  <span class="info">YEAR EXPERIENCE</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="statistic__box">
+                <div class="icon-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="96"
+                    height="95"
+                    viewBox="0 0 96 95"
+                    fill="none"
+                  >
+                    <circle
+                      cx="48.3754"
+                      cy="47.5083"
+                      r="41.4545"
+                      fill="#141514"
+                    />
+                    <circle
+                      cx="48.375"
+                      cy="47.5083"
+                      r="46.75"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-dasharray="3 3"
+                    />
+                    <path
+                      d="M38.353 35.3928C38.353 33.9323 38.7861 32.5046 39.5975 31.2902C40.409 30.0758 41.5623 29.1293 42.9116 28.5704C44.2609 28.0115 45.7457 27.8653 47.1781 28.1502C48.6106 28.4351 49.9264 29.1384 50.9591 30.1712C51.9919 31.2039 52.6952 32.5197 52.9801 33.9521C53.265 35.3846 53.1188 36.8694 52.5599 38.2187C52.001 39.568 51.0545 40.7213 49.8401 41.5327C48.6257 42.3442 47.198 42.7773 45.7375 42.7773C43.779 42.7773 41.9007 41.9992 40.5159 40.6144C39.131 39.2295 38.353 37.3513 38.353 35.3928ZM51.4439 58.137C50.9548 57.6808 50.6063 57.0944 50.4395 56.4467C50.2727 55.7991 50.2945 55.1173 50.5023 54.4816C50.7044 53.8372 51.0863 53.2638 51.603 52.8289C52.1197 52.394 52.7497 52.1155 53.4192 52.0263L55.7268 51.694C55.7268 51.694 56.0961 51.6589 56.2068 51.4355L56.9453 49.9587C57.0044 49.8517 57.0301 49.7296 57.0191 49.6079C56.9961 49.5038 56.945 49.4081 56.8714 49.331C55.9006 48.3547 54.7341 47.595 53.4486 47.1018C52.1632 46.6086 50.7878 46.3931 49.4131 46.4695H42.0287C34.5334 46.4695 31.875 51.9525 31.875 56.6601C31.875 60.8692 34.1088 63.0846 38.3364 63.0846H52.3485C52.6438 63.0846 52.8321 62.863 52.9207 62.383L53.29 60.26C53.3098 60.1696 53.3048 60.0756 53.2755 59.9879C53.2463 59.9001 53.1939 59.8219 53.1238 59.7615L51.4439 58.137ZM67.6288 56.1413C67.738 56.0362 67.8152 55.9024 67.8516 55.7553C67.8879 55.6082 67.8819 55.4538 67.8342 55.3099C67.7865 55.1661 67.6991 55.0387 67.5821 54.9424C67.465 54.8462 67.3231 54.785 67.1728 54.7659L63.4953 54.2435C63.3643 54.2253 63.2396 54.1757 63.1319 54.0989C63.0242 54.022 62.9367 53.9203 62.8769 53.8023L61.2818 50.6417C61.2071 50.4968 61.0939 50.3753 60.9547 50.2905C60.8155 50.2056 60.6556 50.1607 60.4926 50.1607C60.3296 50.1607 60.1697 50.2056 60.0305 50.2905C59.8913 50.3753 59.7781 50.4968 59.7034 50.6417L58.1102 53.8023C58.0502 53.9202 57.9627 54.0218 57.855 54.0987C57.7474 54.1755 57.6227 54.2252 57.4917 54.2435L53.8143 54.7659C53.6635 54.7843 53.5211 54.8451 53.4036 54.9413C53.2861 55.0374 53.1983 55.165 53.1505 55.3092C53.1027 55.4533 53.0969 55.608 53.1337 55.7554C53.1705 55.9027 53.2484 56.0365 53.3583 56.1413L56.0167 58.6779C56.1124 58.7683 56.1843 58.8811 56.2259 59.0061C56.2674 59.131 56.2774 59.2644 56.2548 59.3942L55.6475 62.863C55.6218 63.0238 55.6415 63.1886 55.7044 63.3388C55.7673 63.489 55.8708 63.6187 56.0034 63.7132C56.1359 63.8078 56.2922 63.8635 56.4547 63.8741C56.6172 63.8847 56.7794 63.8497 56.9231 63.7732L60.1114 62.1338C60.2295 62.0728 60.3606 62.0409 60.4935 62.0409C60.6265 62.0409 60.7575 62.0728 60.8757 62.1338L64.0658 63.775C64.2094 63.8511 64.3714 63.8856 64.5336 63.8748C64.6958 63.864 64.8517 63.8082 64.984 63.7137C65.1163 63.6192 65.2196 63.4897 65.2824 63.3398C65.3452 63.1899 65.365 63.0254 65.3396 62.8649L64.7359 59.3923C64.7135 59.2627 64.7233 59.1295 64.7645 59.0046C64.8057 58.8797 64.877 58.7668 64.9722 58.676L67.6288 56.1413Z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h2 class="counter-item">
+                    <span class="odometer" data-odometer-final="10">0</span>
+                    <em class="d-inline-block fst-normal">+</em>
+                  </h2>
+                  <span class="info">TOTAL CLIENT</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="statistic__box">
+                <div class="icon-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="101"
+                    height="100"
+                    viewBox="0 0 101 100"
+                    fill="none"
+                  >
+                    <circle
+                      cx="50.8746"
+                      cy="50.0084"
+                      r="43.6364"
+                      fill="#141514"
+                    />
+                    <circle
+                      cx="50.875"
+                      cy="50.0083"
+                      r="49.25"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-dasharray="3 3"
+                    />
+                    <path
+                      d="M60.3699 65.8989L56.3241 47.8406C58.2532 46.1908 59.4775 43.7409 59.4775 41.0034C59.4775 36.0356 55.4503 32.0083 50.4824 32.0083C45.5146 32.0083 41.4874 36.0356 41.4874 41.0034C41.4874 43.7408 42.7117 46.1908 44.6408 47.8406L40.595 65.8989H36.875V68.0083H64.0899V65.8989H60.3699ZM50.4824 35.3036C53.6253 35.3036 56.1822 37.8606 56.1822 41.0034H54.0728C54.0728 39.0237 52.4622 37.413 50.4824 37.413V35.3036Z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h2 class="counter-item">
+                    <span class="odometer" data-odometer-final="13">0</span>
+                    <em class="d-inline-block fst-normal">+</em>
+                  </h2>
+                  <span class="info">FLAGS TAKEN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
     
-        <!-- JAVASCRIPT FILES -->
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/jquery.sticky.js' %}"></script>
-        <script src="{% static 'js/click-scroll.js' %}"></script>
-        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-        <script src="{% static 'js/magnific-popup-options.js' %}"></script>
-        <script src="{% static 'js/custom.js' %}"></script>
+     
+    </main>
 
-    </body>
-</html>
+{% endblock content%}
+   
