@@ -8,7 +8,8 @@ from .forms import ContactMessageForm  # make sure this is imported
 # Create your views here.
 def index(request):
     
-    portfolio = Portfolio.objects.all()[:2]
+    portfolio = Portfolio.objects.all().order_by('-created_at')[:2]
+
     
     context = {
         "portfolio": portfolio
@@ -19,7 +20,7 @@ def index(request):
 
 def portfolio(request):
     
-    portfolio = Portfolio.objects.all()
+    portfolio = Portfolio.objects.all().order_by('-created_at')
     
     context = {
         "portfolio": portfolio

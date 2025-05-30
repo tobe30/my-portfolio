@@ -1,11 +1,12 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class Portfolio(models.Model):
     title = models.CharField(max_length=255, unique=True)
     name = models.CharField(max_length=255, unique=True)
     image = models.ImageField(upload_to="portfolio-images", default="", blank=True, null=True)
     link = models.URLField(max_length=200, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     
 
 
